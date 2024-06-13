@@ -28,7 +28,12 @@ const ProjectsSection = () => {
   };
 
   return (
-    <section id="projects">
+    <motion.section
+      initial={{ opacity: 0, scale: 0.5 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.5 }}
+      id="projects"
+    >
       <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
         My Projects
       </h2>
@@ -62,7 +67,7 @@ const ProjectsSection = () => {
           </motion.li>
         ))}
       </ul>
-    </section>
+    </motion.section>
   );
 };
 

@@ -104,26 +104,36 @@ const AboutSection = () => {
   };
 
   return (
-    <section className="text-white">
+    <motion.section
+      initial={{ opacity: 0, scale: 0.5 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.5 }}
+      className="text-white"
+    >
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-        <motion.div layout transition={{ duration: 0.5 }}>
-          <Image src="/images/about-image.png" alt="About Image" width={500} height={500} />
+        <motion.div layout transition={{ duration: 0.3 }}>
+          <Image
+            src="/images/about-image.png"
+            alt="About Image"
+            width={500}
+            height={500}
+          />
         </motion.div>
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
           <p className="text-base lg:text-lg px-4 max-h-[12rem] overflow-y-auto">
-            Hello! I&apos;m Ghazi Adila Ghifari, a dedicated student with a passion
-            for web development. Through my studies, I&apos;ve acquired proficiency
-            in various frameworks and ORMs, adept at both front-end and back-end
-            development. Furthermore, my exploration of UI/UX and graphic design
-            enhances my ability to create visually appealing and user-friendly
-            digital solutions. Additionally, I have proficiency in using
-            Microsoft Office applications such as Word, Excel, and PowerPoint,
-            enhancing productivity and presentation capabilities. Complementing
-            my technical skills are the soft skills I&apos;ve cultivated through my
-            role as a secretary. I excel in teamwork, problem-solving, and time
-            management, attributes that contribute to my effectiveness in
-            collaborative projects.
+            Hello! I&apos;m Ghazi Adila Ghifari, a dedicated student with a
+            passion for web development. Through my studies, I&apos;ve acquired
+            proficiency in various frameworks and ORMs, adept at both front-end
+            and back-end development. Furthermore, my exploration of UI/UX and
+            graphic design enhances my ability to create visually appealing and
+            user-friendly digital solutions. Additionally, I have proficiency in
+            using Microsoft Office applications such as Word, Excel, and
+            PowerPoint, enhancing productivity and presentation capabilities.
+            Complementing my technical skills are the soft skills I&apos;ve
+            cultivated through my role as a secretary. I excel in teamwork,
+            problem-solving, and time management, attributes that contribute to
+            my effectiveness in collaborative projects.
           </p>
           <div className="flex flex-row justify-start mt-8">
             {aboutTab.map((tabData) => (
@@ -141,7 +151,7 @@ const AboutSection = () => {
           </div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

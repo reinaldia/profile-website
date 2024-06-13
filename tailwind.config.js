@@ -13,9 +13,6 @@ module.exports = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
-      left: {
-        "3.25": "0.8125rem",
-      },
       before: ["hover", "focus"],
       after: ["hover", "focus"],
     },

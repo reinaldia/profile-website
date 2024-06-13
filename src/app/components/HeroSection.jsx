@@ -6,14 +6,14 @@ import { motion } from "framer-motion";
 
 const HeroSection = () => {
   return (
-    <section className="lg:py-16">
+    <motion.section
+      initial={{ opacity: 0, scale: 0.5 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.5 }}
+      className="lg:py-16"
+    >
       <div className="grid grid-cols-1 sm:grid-cols-12 sm:place-items-center">
-        <motion.div
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
-          className="col-span-8 place-self-center text-center sm:text-left justify-self-center"
-        >
+        <div className="col-span-8 place-self-center text-center sm:text-left justify-self-center">
           <h1 className="text-white mb-4 text-2xl sm:text-4xl lg:text-6xl lg:leading-normal font-extrabold">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-600">
               Hello, I&apos;m Ghazi Adila Ghifari
@@ -21,6 +21,8 @@ const HeroSection = () => {
             <br></br>
             <TypeAnimation
               sequence={[
+                "Software Engineering Student",
+                1000,
                 "Fullstack Developer",
                 1000,
                 "Graphic Designer",
@@ -36,11 +38,10 @@ const HeroSection = () => {
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
             Welcome to My Next.js Profile Website.
           </p>
-        </motion.div>
+        </div>
         <motion.div
-          initial={{ opacity: 0, scale: 0.5 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.5 }}
+          layout
+          transition={{ duration: 0.3 }}
           className="col-span-4 place-self-center mt-4 lg:mt-0"
         >
           <div className="rounded-full bg-[#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
@@ -52,9 +53,9 @@ const HeroSection = () => {
               height={300}
             />
           </div>
-          </motion.div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 
