@@ -12,9 +12,9 @@ const HeroSection = () => {
       transition={{ duration: 0.5 }}
       className="lg:py-16"
     >
-      <div className="grid grid-cols-1 sm:grid-cols-12 sm:place-items-center">
-        <div className="col-span-8 place-self-center text-center sm:text-left justify-self-center">
-          <h1 className="text-white mb-4 text-2xl sm:text-4xl lg:text-6xl lg:leading-normal font-extrabold">
+      <div className="grid grid-cols-1 lg:grid-cols-12 lg:place-items-center">
+        <div className="col-span-8 place-self-center text-center lg:text-left justify-self-center">
+          <h1 className="text-white mb-4 text-xl sm:text-3xl lg:text-5xl lg:leading-normal font-extrabold">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-600">
               Hello, I&apos;m Ghazi Adila Ghifari
             </span>
@@ -39,11 +39,7 @@ const HeroSection = () => {
             Welcome to My Next.js Profile Website.
           </p>
         </div>
-        <motion.div
-          layout
-          transition={{ duration: 0.3 }}
-          className="col-span-4 place-self-center mt-4 lg:mt-0"
-        >
+        <div className="col-span-4 place-self-center mt-4 lg:mt-0">
           <div className="rounded-full bg-[#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
             <Image
               src="/images/hero-image.png"
@@ -53,7 +49,7 @@ const HeroSection = () => {
               height={300}
             />
           </div>
-        </motion.div>
+        </div>
       </div>
     </motion.section>
   );

@@ -34,7 +34,7 @@ const AboutSection = () => {
               />
             ))}
           </div>
-          <div className="grid grid-cols-2 gap-x-8 px-4 max-h-[16rem] overflow-y-auto">
+          <div className="grid grid-cols-2 items-center gap-x-8 px-4 max-h-[16rem] overflow-y-auto">
             {filteredSkills.map((skill, index) => (
               <motion.div
                 key={skill.id}
@@ -44,7 +44,7 @@ const AboutSection = () => {
                 transition={{ duration: 0.2, delay: index * 0.1 }}
               >
                 <div className="flex flex-row gap-4 items-center">
-                  <h3>{skill.name}</h3>
+                  <h3 className="w-[50%] text-xs lg:text-base">{skill.name}</h3>
                   {skill.image && (
                     <Image
                       src={skill.image}
@@ -113,7 +113,7 @@ const AboutSection = () => {
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
         <motion.div layout transition={{ duration: 0.3 }}>
           <Image
-            src="/images/about-image.png"
+            src="/images/about-image.jpg"
             alt="About Image"
             width={500}
             height={500}
