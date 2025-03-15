@@ -18,7 +18,7 @@ const SocialSection = () => {
         <h5 className="text-xl font-bold text-white my-2">{"Let's Connect"}</h5>
         <p className="text-[#ADB7BE] mb-4 max-w-md">
           {
-            "I'm always excited to connect and expand my network! Feel free to reach out anytime, whether you have a question, want to discuss, or simply want to say hello. I'm looking forward to engaging with you and will do my best to respond promptly."
+            "Saya selalu bersemangat untuk terhubung dan memperluas jaringan! Jangan ragu untuk menghubungi saya kapan saja, baik jika Anda memiliki pertanyaan, ingin berdiskusi, atau sekadar ingin menyapa. Saya menantikan untuk berinteraksi dengan Anda dan akan berusaha merespons secepat mungkin."
           }
         </p>
         <div className="socials flex flex-row gap-2 items-center">

@@ -1,13 +1,15 @@
-import React, { useRef } from "react";
+import React from "react";
 import Tags from "./Tags";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 import { EyeIcon } from "@heroicons/react/24/outline";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const ProjectCard = ({ imgUrl, title, description, tags, linkUrl }) => {
-  const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+  const tagVariants = {
+    initial: { x: -50, opacity: 0 },
+    animate: { x: 0, opacity: 1 },
+  };
 
   const getRandomIndex = () => Math.random() + new Date().getTime();
 
@@ -56,9 +58,10 @@ const ProjectCard = ({ imgUrl, title, description, tags, linkUrl }) => {
             tags.map((tag, index) => (
               <motion.span
                 key={`${index}-${getRandomIndex()}`}
+                variants={tagVariants}
                 initial="initial"
-                animate={isInView ? "animate" : "initial"}
-                transition={{ duration: 0.3, delay: index * 0.15 }}
+                animate="animate"
+                transition={{ duration: 0.3, delay: 0.3 + index * 0.15 }}
               >
                 <Tags key={index} name={tag} />
               </motion.span>

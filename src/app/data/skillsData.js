@@ -156,6 +156,7 @@ const skillsData = [
       "Mendesain UI/UX dengan Figma secara kolaboratif",
       "Membuat wireframe, prototype, dan high-fidelity design",
       "Menggunakan Auto Layout untuk mempercepat desain responsif",
+      "Membuat reusable-component untuk meningkatkan pengalaman interaktif",
     ],
   },
   {

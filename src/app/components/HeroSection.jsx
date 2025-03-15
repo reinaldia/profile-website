@@ -16,7 +16,7 @@ const HeroSection = () => {
         <div className="col-span-8 place-self-center text-center lg:text-left justify-self-center">
           <h1 className="text-white mb-4 text-xl sm:text-3xl lg:text-5xl lg:leading-normal font-extrabold">
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-secondary-600">
-              Hello, I&apos;m Ghazi Adila Ghifari
+              {"Hello, I'm Ghazi Adila Ghifari"}
             </span>
             <br></br>
             <TypeAnimation
@@ -37,9 +37,9 @@ const HeroSection = () => {
         <div className="col-span-4 place-self-center mt-4 lg:mt-0">
           <div className="rounded-full bg-[#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">
             <Image
-              src="/images/hero-image.png"
+              src="/images/profile-photo.webp"
               alt="hero image"
-              className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
+              className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2 rounded-full"
               width={300}
               height={300}
             />

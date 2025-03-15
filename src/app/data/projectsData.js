@@ -18,18 +18,21 @@ const projectsData = [
     description: "Keraton Kasepuhan Cirebon Admin Booking Page",
     image: "/images/projects/mockup-pos.webp",
     category: ["All", "Web"],
+    tags: ["Vue.js", "Node.js", "Express.js"],
   },
   {
     title: "Learn4ward",
     description: "Tugas PKK Learning Management System",
     image: "https://placehold.co/600x400?text=WIP",
     category: ["All", "Web"],
+    tags: ["Vue.js", "Node.js", "Express.js"],
   },
   {
-    title: "ORBIT Website (UI)",
-    description: "SMKN 4 Bandung ORBIT Website UI",
+    title: "ORBIT Website",
+    description: "SMKN 4 Bandung ORBIT Website UI/UX",
     image: "/images/projects/orbit-ui-project.png",
     category: ["All", "Design"],
+    tags: ["Figma"],
   },
   {
     title: "Pixel Assets",
@@ -37,12 +40,14 @@ const projectsData = [
       "MPRPL Education Game Project Pixel Assets Created With Pixel Studio",
     image: "/images/projects/pixel-assets-project.png",
     category: ["All", "Design"],
+    tags: ["Pixel Studio"],
   },
   {
     title: "Hello World Album Cover Remake",
     description: "Hello World OST Album Cover Remake",
     image: "/images/projects/hw-album-remake-project.png",
     category: ["All", "Design"],
+    tags: ["Photoshop"],
   },
 ];
 
