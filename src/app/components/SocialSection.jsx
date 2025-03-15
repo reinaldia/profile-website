@@ -12,17 +12,14 @@ const SocialSection = () => {
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5 }}
       id="contact"
-      className="grid md:grid-cols-2 my-12 md:my-12 py-24 gap-4 relative"
+      className="gap-4 relative"
     >
       <div className="z-10">
-        <h5 className="text-xl font-bold text-white my-2">
-          Let&apos;s Connect
-        </h5>
+        <h5 className="text-xl font-bold text-white my-2">{"Let's Connect"}</h5>
         <p className="text-[#ADB7BE] mb-4 max-w-md">
-          I&apos;m always excited to connect and expand my network! Feel free to
-          reach out anytime, whether you have a question, want to discuss, or
-          simply want to say hello. I&apos;m looking forward to engaging with
-          you and will do my best to respond promptly.
+          {
+            "I'm always excited to connect and expand my network! Feel free to reach out anytime, whether you have a question, want to discuss, or simply want to say hello. I'm looking forward to engaging with you and will do my best to respond promptly."
+          }
         </p>
         <div className="socials flex flex-row gap-2 items-center">
           {socialsData.map((social) => (

@@ -1,11 +1,18 @@
-import React from "react";
+import React, { useRef } from "react";
+import Tags from "./Tags";
+import { motion, useInView } from "framer-motion";
 import { EyeIcon } from "@heroicons/react/24/outline";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const ProjectCard = ({ imgUrl, title, description, linkUrl }) => {
+const ProjectCard = ({ imgUrl, title, description, tags, linkUrl }) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  const getRandomIndex = () => Math.random() + new Date().getTime();
+
   const handleLinkClick = () => {
-    if (linkUrl === "-") {
+    if (!linkUrl || linkUrl === "-") {
       toast.error("Link is currently not available!", {
         position: "bottom-left",
         autoClose: 1000,
@@ -25,7 +32,7 @@ const ProjectCard = ({ imgUrl, title, description, linkUrl }) => {
           background: `url(${imgUrl})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
-          backgroundRepeat: "no-repeat"
+          backgroundRepeat: "no-repeat",
         }}
       >
         <div className="overlay items-center justify-center absolute top-0 left-0 w-full h-full bg-[#181818] bg-opacity-0 hidden group-hover:flex group-hover:flex-col group-hover:gap-4 group-hover:bg-opacity-80 transition-all duration-500 ">
@@ -43,7 +50,21 @@ const ProjectCard = ({ imgUrl, title, description, linkUrl }) => {
         </div>
       </div>
       <div className="text-white rounded-b-xl mt-3 bg-[#181818]py-6 px-4">
-        <h5 className="text-xl font-semibold mb-2">{title}</h5>
+        <div className="flex items-center gap-2 mb-2">
+          {tags &&
+            tags.length > 0 &&
+            tags.map((tag, index) => (
+              <motion.span
+                key={`${index}-${getRandomIndex()}`}
+                initial="initial"
+                animate={isInView ? "animate" : "initial"}
+                transition={{ duration: 0.3, delay: index * 0.15 }}
+              >
+                <Tags key={index} name={tag} />
+              </motion.span>
+            ))}
+        </div>
+        <h5 className="text-xl font-semibold mb-1">{title}</h5>
         <p className="text-[#ADB7BE]">{description}</p>
       </div>
     </div>

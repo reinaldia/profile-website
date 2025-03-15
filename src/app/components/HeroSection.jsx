@@ -21,23 +21,18 @@ const HeroSection = () => {
             <br></br>
             <TypeAnimation
               sequence={[
-                "Software Engineering Student",
-                1000,
                 "Fullstack Developer",
-                1000,
+                2000,
                 "Graphic Designer",
-                1000,
+                2000,
                 "UI/UX Designer",
-                1000,
+                2000,
               ]}
               wrapper="span"
               speed={50}
               repeat={Infinity}
             />
           </h1>
-          <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
-            Welcome to My Next.js Profile Website.
-          </p>
         </div>
         <div className="col-span-4 place-self-center mt-4 lg:mt-0">
           <div className="rounded-full bg-[#181818] w-[250px] h-[250px] lg:w-[400px] lg:h-[400px] relative">

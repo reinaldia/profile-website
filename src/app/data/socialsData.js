@@ -5,7 +5,7 @@ const socialData = [
     title: "Whatsapp (Ghazi Adila Ghifari)",
     image: "/icons/whatsapp-icon.svg",
     alt: "Whatsapp Icon",
-    size: 32,
+    size: 24,
   },
   {
     id: 2,
@@ -13,7 +13,7 @@ const socialData = [
     title: "Gmail (Ghazi Ghifari)",
     image: "/icons/gmail-icon.svg",
     alt: "Gmail Icon",
-    size: 40,
+    size: 32,
   },
   {
     id: 3,
@@ -21,7 +21,7 @@ const socialData = [
     title: "Github (reinaldia)",
     image: "/icons/github-icon.svg",
     alt: "Github Icon",
-    size: 40,
+    size: 32,
   },
   {
     id: 4,
@@ -29,7 +29,7 @@ const socialData = [
     title: "Instagram (irafialdia)",
     image: "/icons/instagram-icon.svg",
     alt: "Instagram Icon",
-    size: 34,
+    size: 26,
   },
   {
     id: 5,
@@ -37,7 +37,7 @@ const socialData = [
     title: "Discord (irafialdia)",
     image: "/icons/discord-icon.svg",
     alt: "Discord Icon",
-    size: 38,
+    size: 28,
   },
 ];
 

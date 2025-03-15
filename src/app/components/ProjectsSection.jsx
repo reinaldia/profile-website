@@ -13,7 +13,7 @@ const ProjectsSection = () => {
   const isInView = useInView(ref, { once: true });
 
   const filteredProjects = projectsData.filter((project) =>
-    project.tag.includes(tag)
+    project.category.includes(tag)
   );
 
   const cardVariants = {
@@ -33,9 +33,10 @@ const ProjectsSection = () => {
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5 }}
       id="projects"
+      className="mb-8"
     >
-      <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
-        My Projects
+      <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8">
+        Proyek Saya
       </h2>
       <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
         {projectTags.map((tagItem, index) => (
@@ -51,16 +52,17 @@ const ProjectsSection = () => {
       <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
         {filteredProjects.map((project, index) => (
           <motion.li
-            key={`${project.id}-${getRandomIndex()}`}
+            key={`${index}-${getRandomIndex()}`}
             variants={cardVariants}
             initial="initial"
             animate={isInView ? "animate" : "initial"}
             transition={{ duration: 0.3, delay: index * 0.15 }}
           >
             <ProjectCard
-              key={project.id}
+              key={index}
               title={project.title}
               description={project.description}
+              tags={project.tags}
               imgUrl={project.image}
               linkUrl={project.linkUrl}
             />
